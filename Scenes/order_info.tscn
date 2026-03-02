@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://cq2glnfjgdfja"]
+
+[ext_resource type="Script" uid="uid://bgmubsmgb1nmr" path="res://Scripts/order_info.gd" id="1_20gxp"]
+
+[node name="OrderInfo" type="ColorRect" unique_id=1611931966 node_paths=PackedStringArray("qty_correct", "qty_wrong", "qty_total", "type_sticker", "coldown_visual", "validation", "validation_txt")]
+custom_minimum_size = Vector2(375, 350)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.6431373, 0.6431373, 0.6431373, 1)
+script = ExtResource("1_20gxp")
+qty_correct = NodePath("VBoxContainer/HBoxContainer/CorrectSticker/QtyCorrect")
+qty_wrong = NodePath("VBoxContainer/HBoxContainer/WrongSticker/QtyWrong")
+qty_total = NodePath("VBoxContainer/HBoxContainer/TotalSticker/QtyTotal")
+order_type = Array[String](["r290a", "r600a", "r134a", "r404a"])
+type_sticker = NodePath("VBoxContainer/TypeSticker")
+coldown_visual = NodePath("VBoxContainer/VBoxContainer/ColdownVisual")
+validation = NodePath("VBoxContainer/VBoxContainer/Validation")
+validation_txt = NodePath("VBoxContainer/VBoxContainer/Validation/ValidationTxt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=415382004]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TypeSticker" type="Label" parent="VBoxContainer" unique_id=862819330]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "Tipo: r290a"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer" unique_id=2146628057]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/separation = 0
+
+[node name="Validation" type="ColorRect" parent="VBoxContainer/VBoxContainer" unique_id=291445958]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+color = Color(1, 0, 0, 1)
+
+[node name="ValidationTxt" type="Label" parent="VBoxContainer/VBoxContainer/Validation" unique_id=1488508107]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "NOK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColdownVisual" type="ProgressBar" parent="VBoxContainer/VBoxContainer" unique_id=1526973017]
+custom_minimum_size = Vector2(300, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+show_percentage = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1630878665]
+custom_minimum_size = Vector2(375, 100)
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_constants/separation = 0
+
+[node name="CorrectSticker" type="ColorRect" parent="VBoxContainer/HBoxContainer" unique_id=533975323]
+custom_minimum_size = Vector2(125, 100)
+layout_mode = 2
+color = Color(0.49019608, 1, 0.49019608, 1)
+
+[node name="QtyCorrect" type="Label" parent="VBoxContainer/HBoxContainer/CorrectSticker" unique_id=1764153271]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WrongSticker" type="ColorRect" parent="VBoxContainer/HBoxContainer" unique_id=1894419280]
+custom_minimum_size = Vector2(125, 100)
+layout_mode = 2
+color = Color(1, 0.49019608, 0.49019608, 1)
+
+[node name="QtyWrong" type="Label" parent="VBoxContainer/HBoxContainer/WrongSticker" unique_id=1677913389]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.5
+offset_top = -33.5
+offset_right = 27.5
+offset_bottom = 33.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TotalSticker" type="ColorRect" parent="VBoxContainer/HBoxContainer" unique_id=881484399]
+custom_minimum_size = Vector2(125, 100)
+layout_mode = 2
+color = Color(0.6431373, 0.6431373, 0.6431373, 1)
+
+[node name="QtyTotal" type="Label" parent="VBoxContainer/HBoxContainer/TotalSticker" unique_id=106657413]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.5
+offset_top = -33.5
+offset_right = 27.5
+offset_bottom = 33.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1

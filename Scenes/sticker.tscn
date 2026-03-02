@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://8urkpgxtjbgf"]
+
+[ext_resource type="Script" uid="uid://rx40i3b008ta" path="res://Scripts/sticker_functions.gd" id="1_y38sv"]
+[ext_resource type="Script" uid="uid://bu6s85ns4xgdx" path="res://Scripts/sticker.gd" id="2_5dko6"]
+[ext_resource type="Resource" uid="uid://qdncxnnriymg" path="res://Resources/Stickers/Sticker_r134a.tres" id="3_x7bv7"]
+[ext_resource type="Resource" uid="uid://vahjvhjciq8f" path="res://Resources/Stickers/Sticker_r290a.tres" id="4_o3dha"]
+[ext_resource type="Resource" uid="uid://cdm4rnayd8xoy" path="res://Resources/Stickers/Sticker_r404a.tres" id="5_nbp60"]
+[ext_resource type="Resource" uid="uid://bjckrswx50n5t" path="res://Resources/Stickers/Sticker_r600a.tres" id="6_fyqfd"]
+
+[node name="Sticker" type="TextureRect" unique_id=84063082]
+custom_minimum_size = Vector2(256, 256)
+offset_right = 128.0
+offset_bottom = 128.0
+pivot_offset = Vector2(128, 128)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_y38sv")
+stickers = Array[ExtResource("2_5dko6")]([ExtResource("3_x7bv7"), ExtResource("4_o3dha"), ExtResource("5_nbp60"), ExtResource("6_fyqfd")])

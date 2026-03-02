@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://deyyicd6u8i78"]
+
+[ext_resource type="Script" uid="uid://dsbvkahw8e7sl" path="res://Scripts/result_screen.gd" id="1_qtxv5"]
+
+[node name="ResultScreen" type="Control" unique_id=650696813 node_paths=PackedStringArray("continue_btn")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qtxv5")
+continue_btn = NodePath("Continue")
+
+[node name="Label" type="Label" parent="." unique_id=1623969088]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -186.0
+offset_top = 46.0
+offset_right = 186.0
+offset_bottom = 253.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 48
+text = "Congratulations
+you finished
+the day"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Continue" type="Button" parent="." unique_id=136272456]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.5
+offset_top = -15.5
+offset_right = 39.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "Continue"
+
+[connection signal="pressed" from="Continue" to="." method="_on_button_pressed"]

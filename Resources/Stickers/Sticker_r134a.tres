@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Sticker" format=3 uid="uid://qdncxnnriymg"]
+
+[ext_resource type="Script" uid="uid://bu6s85ns4xgdx" path="res://Scripts/sticker.gd" id="1_nrt4q"]
+[ext_resource type="Texture2D" uid="uid://djd4s7r8hqwme" path="res://Assets/Stickers/icon_r134a.png" id="2_aoof1"]
+
+[resource]
+script = ExtResource("1_nrt4q")
+sticker_icon = ExtResource("2_aoof1")
+sticker_code = "r134a"
+sticker_min_rotation = 350.0
+sticker_max_rotation = 10.0
+metadata/_custom_type_script = "uid://bu6s85ns4xgdx"

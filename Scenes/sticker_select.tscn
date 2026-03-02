@@ -1,0 +1,214 @@
+[gd_scene format=3 uid="uid://cwxruxbkldx3r"]
+
+[ext_resource type="Script" uid="uid://dfg8wks1wnu8h" path="res://Scripts/sticker_select.gd" id="1_nrys2"]
+[ext_resource type="Theme" uid="uid://lyfu8t703nxb" path="res://Assets/Themes/ThemeGame.tres" id="2_d0vfu"]
+
+[sub_resource type="Animation" id="Animation_nrys2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-716, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_b6jps"]
+resource_name = "close"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-716, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_d0vfu"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0009999999, 1),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(-716, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b6jps"]
+_data = {
+&"RESET": SubResource("Animation_nrys2"),
+&"close": SubResource("Animation_b6jps"),
+&"open": SubResource("Animation_d0vfu")
+}
+
+[node name="StickerSelect" type="ColorRect" unique_id=1792768217 node_paths=PackedStringArray("animation", "sticker_code", "sticker_icon")]
+custom_minimum_size = Vector2(716, 200)
+anchors_preset = -1
+anchor_left = -0.559375
+anchor_bottom = 0.2777778
+offset_bottom = -1.5258789e-05
+script = ExtResource("1_nrys2")
+animation = NodePath("AnimationPlayer")
+sticker_code = [NodePath("HBoxContainer/Sticker01/VBoxContainer/Sticker_code"), NodePath("HBoxContainer/Sticker02/VBoxContainer2/Sticker_code"), NodePath("HBoxContainer/Sticker03/VBoxContainer3/Sticker_code"), NodePath("HBoxContainer/Sticker04/VBoxContainer4/Sticker_code")]
+sticker_icon = [NodePath("HBoxContainer/Sticker01/VBoxContainer/Sticker01"), NodePath("HBoxContainer/Sticker02/VBoxContainer2/Sticker02"), NodePath("HBoxContainer/Sticker03/VBoxContainer3/Sticker03"), NodePath("HBoxContainer/Sticker04/VBoxContainer4/Sticker04")]
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=455644854]
+custom_minimum_size = Vector2(602, 166)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -301.0
+offset_top = -83.0
+offset_right = 301.0
+offset_bottom = 83.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Sticker01" type="Button" parent="HBoxContainer" unique_id=616506857]
+custom_minimum_size = Vector2(128, 166)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_d0vfu")
+theme_type_variation = &"ButtonSticker"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Sticker01" unique_id=1199832066]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -128.0
+offset_bottom = 166.0
+grow_horizontal = 0
+
+[node name="Sticker01" type="TextureRect" parent="HBoxContainer/Sticker01/VBoxContainer" unique_id=99898973]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+expand_mode = 2
+
+[node name="Sticker_code" type="Label" parent="HBoxContainer/Sticker01/VBoxContainer" unique_id=1278257935]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Etiqueta"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sticker02" type="Button" parent="HBoxContainer" unique_id=885813916]
+custom_minimum_size = Vector2(128, 166)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_d0vfu")
+theme_type_variation = &"ButtonSticker"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/Sticker02" unique_id=1409871394]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -128.0
+offset_bottom = 166.0
+grow_horizontal = 0
+
+[node name="Sticker02" type="TextureRect" parent="HBoxContainer/Sticker02/VBoxContainer2" unique_id=1565114660]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+expand_mode = 2
+
+[node name="Sticker_code" type="Label" parent="HBoxContainer/Sticker02/VBoxContainer2" unique_id=1418357995]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Etiqueta"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sticker03" type="Button" parent="HBoxContainer" unique_id=1711623508]
+custom_minimum_size = Vector2(128, 166)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_d0vfu")
+theme_type_variation = &"ButtonSticker"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer/Sticker03" unique_id=182072448]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -128.0
+offset_bottom = 166.0
+grow_horizontal = 0
+
+[node name="Sticker03" type="TextureRect" parent="HBoxContainer/Sticker03/VBoxContainer3" unique_id=1600038694]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+expand_mode = 2
+
+[node name="Sticker_code" type="Label" parent="HBoxContainer/Sticker03/VBoxContainer3" unique_id=1650308066]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Etiqueta"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sticker04" type="Button" parent="HBoxContainer" unique_id=253756302]
+custom_minimum_size = Vector2(128, 166)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("2_d0vfu")
+theme_type_variation = &"ButtonSticker"
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="HBoxContainer/Sticker04" unique_id=475208908]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -128.0
+offset_bottom = 166.0
+grow_horizontal = 0
+
+[node name="Sticker04" type="TextureRect" parent="HBoxContainer/Sticker04/VBoxContainer4" unique_id=767861233]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+expand_mode = 2
+
+[node name="Sticker_code" type="Label" parent="HBoxContainer/Sticker04/VBoxContainer4" unique_id=1319731643]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Etiqueta"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ChangeBtn" type="Button" parent="." unique_id=1181870146]
+custom_minimum_size = Vector2(160, 90)
+layout_mode = 0
+offset_left = 716.0
+offset_right = 876.0
+offset_bottom = 90.0
+focus_mode = 0
+text = "Change"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2042908746]
+libraries/ = SubResource("AnimationLibrary_b6jps")
+
+[connection signal="button_down" from="HBoxContainer/Sticker01" to="." method="select_sticker" binds= [0]]
+[connection signal="button_down" from="HBoxContainer/Sticker02" to="." method="select_sticker" binds= [1]]
+[connection signal="button_down" from="HBoxContainer/Sticker03" to="." method="select_sticker" binds= [2]]
+[connection signal="button_down" from="HBoxContainer/Sticker04" to="." method="select_sticker" binds= [3]]
+[connection signal="button_down" from="ChangeBtn" to="." method="_on_change_btn_button_down"]

@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://bd2mofvrps585"]
+
+[ext_resource type="Script" uid="uid://bw0kl0vv8lcuw" path="res://Scripts/button_mobile.gd" id="1_4jbny"]
+[ext_resource type="Theme" uid="uid://lyfu8t703nxb" path="res://Assets/Themes/ThemeGame.tres" id="2_h7en4"]
+
+[node name="ButtonMobile" type="ColorRect" unique_id=175109455 node_paths=PackedStringArray("left_rot_btn", "right_rot_btn", "confirm_btn")]
+custom_minimum_size = Vector2(1280, 148)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -640.0
+offset_top = -148.0
+offset_right = 640.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_4jbny")
+left_rot_btn = NodePath("HBoxContainer/RotationLeft")
+right_rot_btn = NodePath("HBoxContainer/RotationRight")
+confirm_btn = NodePath("Confirm")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1747505215]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -50.0
+offset_right = 320.0
+offset_bottom = 50.0
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="RotationLeft" type="Button" parent="HBoxContainer" unique_id=1513263546]
+custom_minimum_size = Vector2(150, 100)
+layout_mode = 2
+theme = ExtResource("2_h7en4")
+theme_type_variation = &"ButtonMobile"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+text = "<"
+
+[node name="RotationRight" type="Button" parent="HBoxContainer" unique_id=121213957]
+custom_minimum_size = Vector2(150, 100)
+layout_mode = 2
+theme = ExtResource("2_h7en4")
+theme_type_variation = &"ButtonMobile"
+text = ">"
+
+[node name="Confirm" type="Button" parent="." unique_id=789003646]
+custom_minimum_size = Vector2(450, 116)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -466.0
+offset_top = -58.0
+offset_right = -16.0
+offset_bottom = 58.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("2_h7en4")
+theme_type_variation = &"ButtonMobile"
+text = "Confirm"
+
+[connection signal="button_down" from="HBoxContainer/RotationLeft" to="." method="_on_rotation_left_button_down"]
+[connection signal="button_up" from="HBoxContainer/RotationLeft" to="." method="_on_rotation_left_button_up"]
+[connection signal="button_down" from="HBoxContainer/RotationRight" to="." method="_on_rotation_right_button_down"]
+[connection signal="button_up" from="HBoxContainer/RotationRight" to="." method="_on_rotation_right_button_up"]
+[connection signal="button_down" from="Confirm" to="." method="_on_confirm_button_down"]
+[connection signal="button_up" from="Confirm" to="." method="_on_confirm_button_up"]
