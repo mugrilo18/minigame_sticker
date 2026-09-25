@@ -9,10 +9,11 @@
 
 [node name="Sticker" type="TextureRect" unique_id=84063082]
 custom_minimum_size = Vector2(256, 256)
-offset_right = 128.0
-offset_bottom = 128.0
+offset_right = 256.0
+offset_bottom = 256.0
 pivot_offset = Vector2(128, 128)
 size_flags_horizontal = 0
 size_flags_vertical = 0
 script = ExtResource("1_y38sv")
 stickers = Array[ExtResource("2_5dko6")]([ExtResource("3_x7bv7"), ExtResource("4_o3dha"), ExtResource("5_nbp60"), ExtResource("6_fyqfd")])
+rotation_speed = 100.0

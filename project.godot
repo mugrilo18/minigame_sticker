@@ -16,13 +16,14 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="Etiqueta"
 run/main_scene="uid://bl0j0rl7ig547"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://Assets/Stickers/icon.svg"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/size/mode=4
 window/stretch/mode="viewport"
 
 [input]
@@ -47,5 +48,6 @@ confirm={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true

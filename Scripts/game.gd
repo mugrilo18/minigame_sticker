@@ -74,7 +74,7 @@ func StartGame():
 	countdown.start()
 	orderInfo.coldown_visual.max_value = countdown.wait_time
 	
-	total_stickers = randi_range(10, 25)
+	total_stickers = randi_range(5, 10)
 	orderInfo.qty_total.text = str(total_stickers)
 
 func EndOrder():
