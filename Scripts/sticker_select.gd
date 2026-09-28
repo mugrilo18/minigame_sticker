@@ -1,4 +1,5 @@
 extends ColorRect
+class_name StickerSelect
 
 @export var animation: AnimationPlayer
 @export var sticker_info: TextureRect

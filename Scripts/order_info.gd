@@ -1,4 +1,5 @@
 extends ColorRect
+class_name OrderInfo
 
 @export var qty_correct: Label
 @export var qty_wrong: Label

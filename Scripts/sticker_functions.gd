@@ -1,8 +1,9 @@
 extends TextureRect
+class_name StickerFunctions
 
 @export var stickers: Array[Sticker]
 @export var rotation_speed: float
-@export var orderInfo: ColorRect
+@export var orderInfo: OrderInfo
 
 var sticker_code:String
 var current_order:String

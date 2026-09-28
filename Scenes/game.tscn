@@ -7,7 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://bd2mofvrps585" path="res://Scenes/button_mobile.tscn" id="6_i6g32"]
 [ext_resource type="PackedScene" uid="uid://cq2glnfjgdfja" path="res://Scenes/order_info.tscn" id="7_1l0tm"]
 
-[node name="Game" type="Node2D" unique_id=175400280 node_paths=PackedStringArray("sticker", "countdown", "orderInfo", "endOrder", "mobileBtn")]
+[node name="Game" type="Control" unique_id=2045126417 node_paths=PackedStringArray("sticker", "countdown", "orderInfo", "endOrder", "mobileBtn")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_i6g32")
 sticker = NodePath("Sticker")
 countdown = NodePath("Timer")
@@ -16,15 +22,16 @@ endOrder = NodePath("EndOrder")
 mobileBtn = NodePath("ButtonMobile")
 
 [node name="Sticker" parent="." unique_id=1518257697 node_paths=PackedStringArray("orderInfo") instance=ExtResource("2_1l0tm")]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 512.0
-offset_top = 232.0
-offset_right = 768.0
-offset_bottom = 488.0
+offset_left = -128.0
+offset_top = -128.0
+offset_right = 128.0
+offset_bottom = 128.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
@@ -32,12 +39,13 @@ size_flags_vertical = 4
 orderInfo = NodePath("../OrderInfo")
 
 [node name="OrderInfo" parent="." unique_id=1611931966 instance=ExtResource("7_1l0tm")]
+layout_mode = 0
 offset_left = 905.0
 offset_right = 1280.0
+offset_bottom = 350.0
 
 [node name="StickerSelect" parent="." unique_id=1792768217 node_paths=PackedStringArray("sticker_info") instance=ExtResource("5_wowpa")]
-offset_left = -716.0
-offset_bottom = 200.0
+layout_mode = 1
 sticker_info = NodePath("../Sticker")
 
 [node name="Timer" type="Timer" parent="." unique_id=576044762]
@@ -45,22 +53,14 @@ wait_time = 5.0
 one_shot = true
 
 [node name="ButtonMobile" parent="." unique_id=175109455 node_paths=PackedStringArray("sticker", "game") instance=ExtResource("6_i6g32")]
-anchors_preset = 0
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 572.0
-offset_right = 1280.0
-offset_bottom = 720.0
+layout_mode = 1
 size_flags_vertical = 8
 sticker = NodePath("../Sticker")
 game = NodePath("..")
-metadata/_edit_use_anchors_ = true
 
 [node name="EndOrder" parent="." unique_id=1646048181 instance=ExtResource("5_i6g32")]
 visible = false
+layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0

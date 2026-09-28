@@ -1,10 +1,11 @@
-extends Node2D
+extends Control
+class_name GameManager
 
-@export var sticker:TextureRect
+@export var sticker: StickerFunctions
 @export var countdown:Timer
-@export var orderInfo:ColorRect
-@export var endOrder: ColorRect
-@export var mobileBtn: ColorRect
+@export var orderInfo:OrderInfo
+@export var endOrder: EndOrderScreen
+@export var mobileBtn: ButtonMobile
 
 var sticker_rotation
 var correct_stickers:int

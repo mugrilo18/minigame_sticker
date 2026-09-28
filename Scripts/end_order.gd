@@ -1,4 +1,5 @@
 extends ColorRect
+class_name EndOrderScreen
 
 @export var timer: Timer
 @export var coldown: ProgressBar

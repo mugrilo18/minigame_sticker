@@ -4,15 +4,11 @@
 [ext_resource type="Theme" uid="uid://lyfu8t703nxb" path="res://Assets/Themes/ThemeGame.tres" id="2_h7en4"]
 
 [node name="ButtonMobile" type="ColorRect" unique_id=175109455 node_paths=PackedStringArray("left_rot_btn", "right_rot_btn", "confirm_btn")]
-custom_minimum_size = Vector2(1280, 148)
-anchors_preset = 7
-anchor_left = 0.5
+custom_minimum_size = Vector2(0, 170)
+anchors_preset = 12
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -640.0
-offset_top = -148.0
-offset_right = 640.0
 grow_horizontal = 2
 grow_vertical = 0
 color = Color(0, 0, 0, 1)

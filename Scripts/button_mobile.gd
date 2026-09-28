@@ -1,10 +1,11 @@
 extends ColorRect
+class_name ButtonMobile
 
 @export var left_rot_btn:Button
 @export var right_rot_btn:Button
 @export var confirm_btn:Button
-@export var sticker:TextureRect
-@export var game:Node2D
+@export var sticker:StickerFunctions
+@export var game: GameManager
 
 func _on_rotation_left_button_down() -> void:
 	sticker.ui_dir = -1
